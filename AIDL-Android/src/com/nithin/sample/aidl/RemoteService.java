@@ -2,10 +2,11 @@ package com.nithin.sample.aidl;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
+import android.os.Process;
 import android.os.RemoteException;
 import android.util.Log;
-import android.os.Process;
 
 public class RemoteService extends Service {
 
@@ -28,8 +29,12 @@ public class RemoteService extends Service {
 		}
 		
 		public int getUid() throws RemoteException {
-			Log.i(TAG, "getProcessUID(), processUID = "+Process.myUid());
-			return Process.myUid();
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BASE_1_1) {
+				Log.i(TAG, "getProcessUID(), processUID = "+Process.myUid());
+				return Process.myUid();
+			}
+
+			return -1;
 		}
 	};
 	
