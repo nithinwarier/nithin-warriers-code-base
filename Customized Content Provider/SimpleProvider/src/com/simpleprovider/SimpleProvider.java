@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 
+/**
+ * created by Androidians 09/10/2017
+ */
 public class SimpleProvider extends Activity {
 
 	@Override

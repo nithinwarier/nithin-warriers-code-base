@@ -12,6 +12,9 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.util.Log;
 
+/**
+ * created by Androidians 09/10/2017
+ */
 public class Provider extends ContentProvider {
 
 	public static final String AUTHORITY = "simple.provider";
