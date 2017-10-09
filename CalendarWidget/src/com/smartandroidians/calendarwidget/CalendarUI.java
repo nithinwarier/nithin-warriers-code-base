@@ -1,8 +1,5 @@
 package com.smartandroidians.calendarwidget;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,6 +14,9 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class CalendarUI extends LinearLayout {
 	
@@ -217,7 +217,7 @@ public class CalendarUI extends LinearLayout {
 		params.gravity = Gravity.CENTER_HORIZONTAL;
 		calendarLayout.addView(changeYearLayout, changeYrLtParams);
 		calendarLayout.addView(calendarRowLayout, params);
-		LayoutParams calendarLayoutParams = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+		LayoutParams calendarLayoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 		addView(calendarLayout, calendarLayoutParams);
 	}
 	
