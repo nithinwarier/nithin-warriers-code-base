@@ -1,13 +1,16 @@
 package com.sampledatabase;
 
-import java.util.ArrayList;
-
 import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
+/**
+ * createdby Androidians
+ */
 public class SampleDatabase extends ListActivity {
 
 	DBAdapter db;
@@ -19,10 +22,7 @@ public class SampleDatabase extends ListActivity {
 			db = new DBAdapter(this);
 
 			insertData();
-//			db.updateTitle(1, "", "", "");
 			displayAll();
-			// retrieveSingleData(4);
-
 		} catch (Exception e) {
 			System.out.println("Exception in SampleDatabase onCreate() : e = "
 					+ e);
