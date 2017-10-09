@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+/**
+ * created by Androidians
+ */
 public class DBAdapter {
 	public static final String KEY_ROWID = "_id";
 	public static final String KEY_ISBN = "isbn";
