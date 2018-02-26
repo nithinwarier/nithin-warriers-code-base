@@ -167,5 +167,25 @@ public class LinkedList2 {
 
         return secondPtr;
     }
+    
+    private static void pairwiseSwapToReverse(Node head) {
+        if (head == null) return;
+        if (head.next == null) return;
+
+        Node p = head;
+        while (p != null && p.next != null) {
+            int k = p.data;
+            p.data = p.next.data;
+            p.next.data = k;
+            p = p.next.next;
+        }
+
+        Node temp = head;
+        while (temp != null) {
+            System.out.println("\t"+temp.data);
+            temp = temp.next;
+        }
+
+    }
 
 }
