@@ -33,7 +33,7 @@ public class RotateArray {
         }
 
         for (int i=0;i<result.size();i++) {
-            System.out.println("\t"+result.get(i));
+            System.out.print("\t"+result.get(i));
         }
     }
 
