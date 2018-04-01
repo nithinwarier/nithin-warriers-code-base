@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by nithin on 07/03/18.
  */
 
-public class InterviewBitArrayMath {
+public class PlusOne {
 
     public static void main (String[] args) {
         int[] res = plusOne(new int[] {9,9});
