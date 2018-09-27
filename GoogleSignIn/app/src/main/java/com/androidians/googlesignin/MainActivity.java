@@ -24,12 +24,10 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
-
     public static final String TAG = "MainActivity";
-    private GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 9001;
-
-
+    private GoogleSignInClient mGoogleSignInClient;
+    
     private TextView mStatusTextView;
     private TextView mDetailTextView;
 
@@ -40,11 +38,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                // Web client ID from firebase console - authentication - Enable google sign in and get it from settings
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
